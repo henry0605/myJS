@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bmi;
+
+        //計算bmi
+        bmi = myw / (myH*myH);
+        //取出小數點二位的字串
+        bmi = bmi.tofixed(2);
+        //字串轉數字
+
+        bmi = Number(bmi);
+        // 測試用
+        // bmi=30 
+        console.log(bmi);
+
+        //檢查bmi落在哪個區間並顯示訊息結果
+        //檢查bmi<18.5
+        //多層檢查(符合條件，執行完成就結束檢查)
+        if (bmi<18.5) 
+            {console.log('體重過輕')
+        }else if (bmi>18.5 && bmi<24)
+            {console.log('正常範圍')}
+        
+        else if (bmi>24 && bmi<30)
+            {console.log('輕度肥胖')}
+
+        else if (bmi>30 && bmi<35)
+        {console.log('中度肥胖')}
+
+        else if (bmi>=35)
+        {console.log('重度肥胖')}
+
+
+        
+
+    </script>
+
+</body>
+
+</html>
