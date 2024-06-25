@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 血型判斷(大小寫不同)
+        // A=>A型
+        // a=>A型
+        // 轉換大小寫
+
+
+
+        let blood = prompt('請輸入血型=>使用if-else-if')
+        // 變數名.blood.toUpperCase();//轉大寫
+        // 變數名.blood.toLowerCase();//轉小寫
+
+
+        // if-else-if
+        if (blood == null) { // 是否按了取消
+            document.write('按了取消');
+        } else {
+            //按了確定
+            //1.去除空白
+            //2.轉大寫
+            blood = blood.trim().toUpperCase();
+
+            //2.檢查血型代號
+
+            if (blood == '') {
+                document.write('尚未輸入血型');
+            } else if (blood == 'A') {
+                document.write('A型');
+            } else if (blood == 'B') {
+                document.write('B型');
+            } else if (blood == 'O') {
+                document.write('O型');
+            } else if (blood == 'AB') {
+                document.write('AB型');
+            } else {
+                //以上都不是
+                document.write('血型代號err');
+            }
+        }
+
+
+        //換行
+        document.write('<br>');
+
+        // switch
+        let blood2 = prompt('請輸入血型=>使用switch');
+        if (blood2 == null) {// 是否按了取消
+            document.write('按了取消');
+        } else {
+            //按了正確
+            switch (blood2.trim().toLowerCase()) {
+                case '':
+                    document.write('尚未輸入血型')
+                    break;
+                case 'a':
+                    document.write('A型')
+                    break;
+                case 'b':
+                    document.write('B型')
+                    break;
+                case 'o':
+                    document.write('O型')
+                    break;
+                case 'ab':
+                    document.write('AB型')
+                    break;
+                default:
+                    //以上都不是
+                    document.write('血型代號err')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
