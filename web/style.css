@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    background-image: url(./images/bg.jpg);
+    font-size: 12px;
+}
+img {
+    display: block;
+}
+iframe{
+    display: block;
+    margin: 0 auto;
+}
+.box{
+    width: 1000px;
+    margin: 0 auto;/* 間距(auto)自動偵測必須搭配寬度(width) */
+}
+.btn {
+    float: left; /*用float浮動區塊，覆蓋原來的black */
+}
+.col{
+    font-size: 14px;
+    float: left;
+    width: 456px; /*文字會自動延展，所以要自訂尺寸*/
+    border: dotted 2px #189cde;
+    margin: 10px;
+    padding: 10px;
+}
+.col span { /* <span>主要用來修改樣式*/
+    color: rgb(255, 85, 0);
+}
+hr {
+    border: #189cde 1px solid;
+}
+address{
+    font-style: normal;
+}
+h1{
+    font-size: 1.6rem;
+}
+h2{
+    font-size: 150%; /* 相等 font-size : 1.5em*/
+    }
+p{
+    font-size: 1em; /*<p> 預設font-size :1em*/
+}
+.footer{
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center; /*單純置中文字*/
+    border-top: dotted 2px #189cde;
+    padding: 20px 0;    
+}    
