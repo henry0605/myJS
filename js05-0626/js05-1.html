@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 使用迴圈的前提
+        // 1. 連續執行一樣的程式敘述
+        // 2. 有規律性
+        // for()=> 已知執行次數
+        // for(參數1; 參數2; 參數3;)
+        // 參數1 : 迴圈計數器變數起始值
+        // 參數2 : 執行迴圈的條件
+        // 參數3 : 每次執行迴圈後，計數器變數的增減值
+
+        // ex1: 顯示連續5次Hello+換行
+
+        for (let i = 1; i <= 5; i++) {
+            document.write('Hello<br>');
+        }
+        // 建立水平線=><hr> 
+        document.write('<hr>');
+
+        // ex2. 顯示數字10-15
+        // 方法一
+        for (let i = 10; i <= 15; i++) {
+            document.write(i + ',');
+
+        }
+        document.write('<hr>');
+        // 方法二
+        // 使用迴圈外的變數顯示數字
+        let a = 10;
+        for (let i = 1; i <= 6; i++) {
+            document.write(a + ',');
+            a++;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
