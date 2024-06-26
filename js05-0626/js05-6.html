@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bingoNum = 90;
+
+            for (let i = 1; i <= 3; i++) {
+            let result = prompt("請輸入數字")
+            document.write(`第${i}次:${result}<hr>`);
+            if (result === bingogNum ){
+            document.write("答对了!");
+                break; 
+            }else{
+                if(result===3){
+                document.write("挑战失败");
+            }
+
+        }
+    }
+        
+    </script>
+</body>
+
+</html>

@@ -39,8 +39,119 @@
         let a = 10;
         for (let i = 1; i <= 6; i++) {
             document.write(a + ',');
-            a++;
+            a++; //a = a+1 ;
         }
+        document.write('<hr>');
+
+        // 寫法三
+        let b = 9;
+        for (let i = 1; i <= 6; i++) {
+            document.write((b = b + 1) + ',');
+            // b++;
+        }
+
+        document.write('<hr>');
+
+        // 寫法四
+        let c = 10;
+        for (let i = 1; i <= 6; i++) {
+            document.write((c++) + ',');
+
+        }
+        //  c++ > 先顯示，再加+1
+        //  ++c > 先+1，再顯示
+
+        document.write('<hr>');
+
+        // 寫法五
+        let d = 9;
+        for (let i = 1; i <= 6; i++) {
+            document.write((++d) + ',');
+        }
+
+        document.write('<hr>');
+
+        // ex3. 顯示1-10奇數
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 1) {            // % > 兩數相除取於數          
+                document.write(i + " ");
+            }
+
+        }
+
+        document.write('<hr>');
+
+        // ex4. 顯示1-10的偶數，用逗號隔開，但最後一個逗號取消
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                //1.先檢查是否為最後一個值，不是=> 值+逗號
+                if (i != 10) {
+                    document.write(i + ",");
+                }
+                else { //2.最後一個值，不顯示逗號=>值
+                    document.write(i);
+                }
+            }
+
+        }
+
+        document.write('<hr>');
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 === 0) {
+                //1.先顯示值
+                document.write(i);
+                //2.再檢查不是最後一個值的時候顯示逗號
+                if (i != 10) {
+                    document.write(',');
+
+                }
+            }
+
+        }
+
+        document.write('<hr>');
+
+        // ex5:請用一個迴圈，找出1-10中，迴圈後才顯示結果 3的倍數與5的倍數
+        // 建立一個存放3的倍數的變數
+        let str3 = "";   //連續兩個單引號或雙引號，表示空字串(連空白都沒有)
+        // 建立一個存放5的倍數的變數
+        let str5 = "";
+        // 寫出迴圈找出3跟5的倍數
+        for (let i = 1; i <= 10; i++) {
+            //找出3的倍數
+            if (i % 3 === 0) {
+                //str3 += i +' '; (簡化寫法，跟下面一樣)             
+                str3 = str3 + i + ' ';    //各別保存起來(串接)
+                //找出5的倍數
+            } else if (i % 5 === 0)
+                str5 = str5 + i + ' ';    //各別保存起來(串接)
+
+        }
+        // 迴圈結束後再顯示結果
+        // 反引號中的變數要用${變數名}包起來
+        document.write(`1-10中3的倍數=>${str3}<br>`);   //字串字面值寫法使用反引號
+        //document.write(`1-10中5的倍數=>${str5}<br>`);
+        document.write("1-10中5的倍數=>" + str5 + "<br>"); //一般串接方法，使用雙引號或單引號串接
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 === 0 || i % 5 === 0) {
+                document.write(i, ',');
+            }
+
+        }
+
+        // i=i-2
+        // i-=2 (寫法一樣)
+
+        // i=i+2
+        // i+=2 (寫法一樣)
+
+
+
+
+
+
 
 
 
