@@ -12,49 +12,46 @@
         // <!-- 計算BMI -->
         // <!--bmi = 體重/身高(m)的平方  -->
         // <!--bmi直到小數點第二位 -->    
-    
+
         // 建立體重
         let myW = 60;
 
         // 建立身高
-        let myH = 1.67*1.67
+        let myH = 1.67
 
         //建立bmi
         let bmi;
 
         //計算bmi
-        bmi = myW / myH
+        bmi = myW / (myH * myH);
 
-        console.log(bmi)
-    
         //取出小數點二位的字串
-        console.log(bmi) = bmi.tofixed(2);
+        bmi = bmi.toFixed(2);
         //字串轉數字
         bmi = Number(bmi);
 
-        console.log(bmi);
+        console.log(`myBmi為${bmi}`);
 
         //檢查bmi落在哪個區間並顯示訊息結果
         //檢查bmi<18.5
-        if (bmi<18.5) {
-        // 檢查條件成立
-        console.log('體重過輕')
-        }
+        if (bmi < 18.5) {console.log('體重過輕')} // 檢查條件成立 (if裡面放要檢查的條件) 如果符合條件,就顯示甚麼
+
         // 區間資料使用交集邏輯運算子&& (AND)
         // 檢查18.5<=bmi<24
-        if (bmi>18.5 && bmi<24){console.log('正常範圍')}
+        if (bmi >= 18.5 && bmi < 24) { console.log('正常範圍') }
 
         // 檢查27<=bmi<30
-        if (bmi>24 && bmi<30){console.log('輕度肥胖')}
+        if (bmi >= 27 && bmi < 30) { console.log('輕度肥胖') }
 
         // 檢查30<=bmi<35
-        if (bmi>30 && bmi<35){console.log('中度肥胖')}
+        if (bmi >= 30 && bmi < 35) { console.log('中度肥胖') }
 
         // 檢查bmi>=35
-        if (bmi>=35){console.log('重度肥胖')}
+        if (bmi >= 35) { console.log('重度肥胖') }
 
-    
+
     </script>
 
 </body>
+
 </html>
