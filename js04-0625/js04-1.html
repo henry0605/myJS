@@ -14,14 +14,14 @@
         // 取消時會回傳空值=>null
         let a = prompt('請輸入星期別代號:1-7');
         // trim()=>去除內容前後多餘空白
-        // length=>資料的長度
+        // length=>資料的長度(字數)
         console.log(a.length);
         switch (a.trim()) {
             case null:
-                document.write('您按了取消')
+                document.write('您按了取消');
                 break;
             case'': //沒有填寫任何內容，連空白都沒有(連續兩下單引號或雙引號) 
-                document.write('您尚未填寫代號')
+                document.write('您尚未填寫代號');
                 break;        
             case '1':
                 document.write('星期一');
