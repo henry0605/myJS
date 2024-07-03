@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請輸入成績N次，直到輸入負1或取消就結束輸入
+        /*
+        第1次分數:90
+        第2次分數:50
+        第3次分數:60
+        第4次分數:-1
+
+        ----------
+        
+        及格人數:2人
+        不及格人數:1人
+        總分:200分
+        總平均:66.67分
+        
+        */
+
+        let count = 0; //第N次
+        let pass = 0; //及格人數
+        let fail = 0; //不及格人數
+        let tot = 0; //總分
+
+
+        while (true) { //不需要執行迴圈的條件
+            let score = prompt('請輸入分數:');
+            //是否輸入-1或按取消
+            if (score === '-1' || score == null) {
+                break;
+            }
+
+            score = Number(score); //字串轉數值
+
+            //是否為非數字
+            if (isNaN(score)) {
+                alert('非數值呦請重新輸入!!!! ><')
+                continue;     //如果是非數字就不再往下執行，回到迴圈開始時，重新輸入
+            }
+            
+            //分數是否介於0-100
+            if (score < 0 || score > 100) {
+                alert('請輸入介於0-100的數字喔喔 ^^')
+                continue;     //如果不是0-100就不再往下執行，回到迴圈開始時，重新輸入
+            }
+            
+            //及格與否
+            if (score > 60) {
+                pass++; //及格人數統計
+            } else {
+                fail++; //不及格人數統計
+            }
+
+            tot = tot + score; //總分累計
+            count++; //執行第N次
+            document.write(`第${count}次分數:${score}分<br>`);
+        }
+
+        document.write(`----------<br>`);
+        document.write(`及格人數:${pass}人<br>`);
+        document.write(`不及格人數:${fail}人<br>`);
+        document.write(`總分:${tot}分<br>`);
+        document.write(`總平均:${(tot / count).toFixed(2)}分<br>`);
+
+    </script>
+
+</body>
+
+</html>

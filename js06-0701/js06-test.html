@@ -49,6 +49,25 @@
             }
             i++ ; // i++ 是必須的，因為這樣可以確保迴圈變數 i 在每次迴圈之後都會增加 1
         }
+
+        // do-while
+        tot = 0; //沿用for迴圈時的tot變數，所以tot=0
+        i = 1 ; //沿用i變數，所以i=1
+        do{
+            if (i % 5 === 0) {
+                //tot = tot + i;
+                tot += i;
+                console.log(`i=${i},tot=${tot}`);
+                // 檢查tot是否大於50
+                if (tot > 50) {
+                    break; //結束迴圈
+                    
+                }
+            }
+            i++ ;
+        }while(i <= 100);
+        
+
     </script>
 </body>
 

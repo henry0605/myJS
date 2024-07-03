@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 請輸入成績N次，直到輸入負1或取消就結束輸入
+        /*
+        第1次分數:90
+        第2次分數:50
+        第3次分數:60
+        第4次分數:-1
+
+        ----------
+        
+        及格人數:2人
+        不及格人數:1人
+        總分:200分
+        總平均:66.67分
+        
+        */
+        
+        let passCount = 0;
+        let failCount = 0;
+        let total = 0;
+        let count = 0;
+
+        while (true) {
+            let input = prompt(`第${count + 1}次分數:`);
+
+            if (input === null || input === "-1") {
+                break;
+            }
+            let score = Number(input);
+            if (!isNaN(score)) {
+                total += score;
+                count++;
+
+                if (score >= 60) {
+                    passCount=passCount+1;
+                } else {
+                    failCount=failCount+1;
+                }
+                document.write(`第${count}次分數:${score}分<br>`);
+            } else {
+                alert('請輸入有效的數字');
+            }
+        }
+
+        document.write(`----------<br>`);
+        document.write(`及格人數:${passCount}人<br>`);
+        document.write(`不及格人數:${failCount}人<br>`);
+        document.write(`總分:${total}分<br>`);
+        document.write(`總平均:${(total / count).toFixed(2)}分<br>`);
+
+    </script>
+</body>
+
+</html>
