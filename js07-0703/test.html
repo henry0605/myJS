@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let bingoNum = Math.floor(Math.random() * 100) + 1;
+        let guess;
+        let min = 1;
+        let max = 100;
+        let freq = 0;
+
+
+        while (guess !== bingoNum) {
+            freq++;
+            guess = Number(prompt(`第${freq}次：請輸入${min}-${max} 之間的數字`));
+            console.log(`第${freq}次：${guess}`);
+
+            if (guess < bingoNum) {
+                console.log(`太小了（提示：${guess}-${max}）`);
+                min = guess;
+            } else if (guess > bingoNum) {
+                console.log(`太大了（提示：${min}-${guess}）`);
+                max = guess;
+            } else {
+                console.log(`猜對了`);
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
