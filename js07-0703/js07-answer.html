@@ -31,13 +31,12 @@
         let tot = 0; //總分
 
 
-        while (true) { //不需要執行迴圈的條件
+        while (true) { //不需要執行迴圈的條件 //while(1) = while(ture) >>無限次執行的意思
             let score = prompt('請輸入分數:');
             //是否輸入-1或按取消
             if (score === '-1' || score == null) {
                 break;
             }
-
             score = Number(score); //字串轉數值
 
             //是否為非數字
