@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arrNum = [];
+        //取出第一區:6個號碼1-49
+        for (let i = 0; i < 6; i++) {
+            //取亂數
+            let lottery = Math.floor(Math.random() * 49) + 1;
+            //檢查陣列是否存在此號碼
+            if (arrNum.indexOf(lottery) == -1) {
+                arrNum.push(lottery);
+            } else {
+                console.log(`在編號${i}位置,${lottery}重複`);
+                i = i - 1 //因為重複，所以編號位置要-1
+            }
+        }
+        arrNum.sort((a, b) => { return a - b });
+        console.log(arrNum);
+
+        let i = 0;
+        while (i < 6) {
+            let lottery = Math.floor(Math.random() * 49) + 1;
+            if (arrNum.indexOf(lottery) == -1) {
+                arrNum.push(lottery);
+                i++
+            }
+        }
+        arrNum.sort((a, b) => { return a - b });
+        console.log(arrNum);
+
+        do {
+            let lottery = Math.floor(Math.random() * 49) + 1;
+            if (arrNum.indexOf(lottery) == -1) {
+                arrNum.push(lottery);
+                i++
+            }
+        }while(i<6);
+        arrNum.sort((a, b) => { return a - b });
+        console.log(arrNum);
+
+
+
+    </script>
+</body>
+
+</html>

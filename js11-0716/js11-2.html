@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //物件模組化 => 物件樣板 => 自首要大寫
+        function Mobile(brand,color,size){
+            this.brand = brand;
+            this.color = color;
+            this.size = size;
+            this.showMsg=function(){
+                console.log(`品牌:${this.brand},色彩:${this.color},尺寸:${this.size}`);
+            }
+        }
+        
+        let m1= new Mobile('iPhone','black','14');
+        m1.showMsg();
+        let m2= new Mobile('三星','灰黑','13');
+        m2.showMsg();                            // >>>不同資訊共用一個物件樣板
+
+    </script>
+    
+</body>
+</html>

@@ -11,12 +11,17 @@
     <script>
         /*  1. 取出 1-49 號中任意6個號碼（不重覆+遞增排序）
         2. 特別號：1個號碼（1-49取一個） */
-        let computerNum = []
+        let computerNum = [];
+        let i = 0;
         while (computerNum.length < 6) {
             let lottery = Math.floor(Math.random() * 49) + 1;
-            if (!computerNum.includes(lottery)) {             //為甚麼用indexof就會故障??
-                computerNum.push(lottery)
+            if (computerNum.indexOf(lottery) == -1) {             
+                computerNum.push(lottery);
+                i++;
             }
+            // if (!computerNum.includes(lottery)) {             //為甚麼用indexof就會故障??
+            //     computerNum.push(lottery)
+            // }
         }
         computerNum.sort((a, b) => a - b);  //想不到怎麼遞增所以用查的
         console.log('電腦隨機選號:' + computerNum);
