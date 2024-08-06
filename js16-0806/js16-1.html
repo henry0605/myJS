@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border:1px solid red;
+            width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+        }
+        marquee{
+            background-color: aquamarine;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <!-- 跑馬燈 -->
+    <!--behavior 是控制捲動方式 預設為scroll 左右來回:alternate 只動一次:slide -->
+    <!--scrollamount 是控制移動速度 --> <!-- direction是控制出來的方向 -->
+    <marquee 
+    behavior="alternate" 
+    direction="right"
+    scrollamount="6" 
+    onmouseover="stop();" 
+    onmouseout="start();">
+        我好想睡覺喔
+    </marquee>
+</div>
+</body>
+</html>

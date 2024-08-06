@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 事件基本語法 -->
+    <!-- <div 事件名稱="程式碼">標籤內容</div> -->
+    <!-- <button 事件名稱="程式碼" >按鈕內容</button> -->
+
+    <div onclick="changeP1();">按一下變更段落內容</div>
+    <P>第一段Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, molestiae itaque? Similique soluta recusandae,
+        reiciendis quibusdam repellat amet expedita obcaecati veniam quisquam incidunt aliquid porro exercitationem,
+        natus repudiandae praesentium eos?</P>
+    <h2 onclick="changeP2();">標題2</h2>
+    <p id="p2" class="p2">第二段Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione suscipit placeat pariatur.
+        Harum illo culpa quisquam hic quod consectetur sed sit autem dolorum aliquam cupiditate inventore a qui, aut
+        corrupti.</p>
+    <script>
+        //更改第一個段落
+        function changeP1() {
+            //變更網頁body內容
+            //document.body.innerHTML='Hello'
+
+            //變更段落內容
+            //document.querySelector('p').innerHTML='Hello';
+            //只取第一個段落
+            //console.log(document.querySelector('p'));
+            //取得所有段落1
+            //console.log(document.querySelectorAll('p'));
+            //取得所有段落2
+            console.log(document.getElementsByTagName('p'));
+
+
+            //產生集合的陣列物件
+            document.getElementsByTagName('p')[0].innerHTML = 'Hello';
+        }
+
+        //更改第二個段落
+        function changeP2() {
+            //取得第二個段落改變墮落內容
+            //document.getElementsByTagName('p')[1].innerHTML='第二個段落被我更改了';
+
+            //取得id改變段落內容
+            //document.getElementById('p2').innerHTML='取得id改變段落內容';
+
+            //取得class=>p1 改變段落內容
+            //console.log(document.getElementsByClassName('p2'));
+            //document.getElementsByClassName('p2')[0].innerHTML='取得class=>p1 改變段落內容';
+            document.querySelector('.p2').innerHTML = '取得class=>p1 改變段落內容';
+        }
+    </script>
+</body>
+
+</html>
