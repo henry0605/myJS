@@ -41,7 +41,7 @@
             let errMsg = document.getElementById('errMsg');
             //預設errMsg內容為空字串
             //errMsg.textContent = '';
-            //檢查文字方塊內容是否有5個字
+            //檢查文字方塊內容是否有?個字
             if (e.target.value.length != numLength) {
                 //若沒有，則顯示提示訊息給errMsg
                 errMsg.textContent = `${lebelName}必須是${numLength}個字`;
@@ -49,7 +49,7 @@
                 //若有，則清除提醒訊息給errMsg
                 errMsg.textContent = '';
             }
-        };
+        }
 
 
 

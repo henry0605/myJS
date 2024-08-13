@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin: 100px;
+            border: 1px solid red;
+        }
+
+        img {
+            width: 500px;
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 換圖效果 -->
+    <div class="wrap">
+        <div>
+            <img onmouseover=changPic(); onmouseout="restorePic()"; id="pic" src="../image/christopher-jolly-gcCcIy6Fc_M-unsplash.jpg" alt="">
+        </div>
+    </div>
+    <script>
+        function changPic(){
+            let pic = document.getElementById('pic');
+            //換圖
+            pic.src="../image/tent3.png";
+        }
+        function restorePic(){
+            let pic = document.getElementById('pic');
+            //換圖
+            pic.src="../image/christopher-jolly-gcCcIy6Fc_M-unsplash.jpg";
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin: 100px;
+            display: flex;
+            flex-direction: column;
+            /* 垂直排列图片 */
+            align-items: center;
+            /* 图片水平居中对齐 */
+        }
+
+        .top-img {
+            width: 500px;
+            height: 350px;
+            border: 2px solid black;
+        }
+
+        .bottom-imgs {
+            display: flex;
+            gap: 20px;
+            /* 图片之间的间隔 */
+        }
+
+        .bottom-imgs img {
+            width: 140px;
+            /* 调整图片大小 */
+            height: 105px;
+            /* 调整图片大小 */
+            border: 2px solid black;
+            margin: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 大圖 -->
+        <img class="top-img" id="topPic" src="../image/christopher-jolly-gcCcIy6Fc_M-unsplash.jpg" alt="">
+
+        <!-- 小圖 -->
+        <div class="bottom-imgs" id="bottomPic">
+            <img onmouseover="changePic(this.src)" onmouseout="restorePic()" src="../image/tent1.png"
+                alt=""> <!-- this的意思是抓他自己的照片 -->
+            <img onmouseover="changePic(this.src)" onmouseout="restorePic()" src="../image/tent2.png"
+                alt="">
+            <img onmouseover="changePic(this.src)" onmouseout="restorePic()" src="../image/tent3.png"
+                alt="">
+        </div>
+    </div>
+    </div>
+    <script>
+        let originalSrc = document.getElementById('topPic').src; // 紀錄原始圖片 src
+
+        function changePic(src) {
+            document.getElementById('topPic').src = src; // 更换圖片
+        }
+
+        function restorePic() {
+            document.getElementById('topPic').src = originalSrc; // 恢复原始圖片
+        }
+    </script>
+</body>
+
+</html>

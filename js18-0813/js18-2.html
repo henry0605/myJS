@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="myDiv"></div>
+        <button onclick="changeR()">紅</button>
+        <button onclick="changeG()">綠</button>
+        <button onclick="changeB()">藍</button>
+        <hr>
+        <button onclick="changeColor('r')">紅</button>
+        <button onclick="changeColor('g')">綠</button>
+        <button onclick="changeColor('b')">藍</button>
+    </div>
+    <script>
+        function changeR() {
+            let myDiv = document.getElementById('myDiv');
+            myDiv.style.backgroundColor = 'red';
+        }
+        function changeG() {
+            let myDiv = document.getElementById('myDiv');
+            myDiv.style.backgroundColor = 'green';
+        }
+        function changeB() {
+            let myDiv = document.getElementById('myDiv');
+            myDiv.style.backgroundColor = 'blue';
+        }
+
+        // 整合上方函式為一個函式，傳參數
+        function changeColor(myColor) {
+            let myDiv = document.getElementById('myDiv');
+            switch (myColor) {   //switch>>檢查條件的語法
+                case 'r':
+                    myDiv.style.backgroundColor = 'red';
+                    break;
+                case 'g':
+                    myDiv.style.backgroundColor = 'green';
+                    break;
+                case 'b':
+                    myDiv.style.backgroundColor = 'blue';
+                    break;
+            }
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+
+</html>
