@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習:變更下拉式清單中的項目時,開啟網站到新標籤頁</title>
+</head>
+
+<body>
+    <label for="wSelect">選擇網站:</label>
+    <select id="wSelect" name="wSelect">
+        <option value="">選擇一個網站</option>
+        <option value="https://www.google.com.tw/?hl=zh_TW">google</option>
+        <option value="https://www.youtube.com/">youtube</option>
+        <option value="https://www.facebook.com/">facebook</option>
+    </select>
+    <script>
+        //取得下拉方塊
+        let url = document.getElementById('wSelect');
+        //監聽change事件
+        url.addEventListener('change', function () {
+            //取得下拉選單中的值，跳轉到指定的網站
+            location.href = url.value;
+        });
+    </script>
+</body>
+
+</html>
